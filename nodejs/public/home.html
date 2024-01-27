@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Node Tutorial</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Node JS <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Express JS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/embedded_javascript">Embedded Javascript</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="/">Others</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="alert alert-dark" role="alert">
+
+        <b>Node JS </b> It is a run time environment
+    </div>
+    <div class="container" style="max-width: 92%;">
+        <br>
+        <h2 style="color:blue">Hello there!</h2>
+        <span>Lets deep dive into node js . Lots to learn and really lot to explore.</span>
+        <br>
+        <hr>
+        <div class="row">
+            <div class="col-sm">
+
+                <h3>Commands need to know</h3>
+                <p style="margin-top: 14px;">To inintalize the project : <span class="badge badge-warning">npm
+                        init</span> It will generat the node </p>
+                <p style="margin-top: 14px;">Now create a file <span class="badge badge-success">index.js</span></p>
+                <p style="margin-top: 14px;">To run the project : <span class="badge badge-primary">node index.js</span>
+                </p>
+
+                <h3>REPL : Read Evail Print Loop</h3>
+                <p style="margin-top: 14px;">It is a command line interface usually for testing js</p>
+                <p style="margin-top: 14px;">To launch it using cmd: <span class="badge badge-success">node</span></p>
+
+            </div>
+            <div class="col-sm">
+                <img height="300" width="500"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThVVzffGFpywTGobaC2jJdoj9GsFrWsfthGg&usqp=CAU"></img>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <h2>
+            Node Js has some predefined Modules</h2>
+        <h3 style="margin-top: 14px;">
+            <small class="text-muted">
+                <li>Wrapper Module</li>
+                <li>Path Module</li>
+                <li>File System Module</li>
+                <li>OS Module</li>
+                <li>URL Module</li>
+                <li>Event Module</li>
+                <li>HTTP Module</li>
+
+            </small>
+        </h3>
+        <br>
+        <hr>
+
+        <div class="row">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body alert-primary">
+                        <br>
+                        <h3 style="color: green;"># Wrapper Module</h3>
+                        <p style="margin-top: 14px;">Each and every file in node.js is wrapped in a function like :</p>
+                        <p style="margin-top: 14px;">Suppose there is a command in index.js => console.log("hello
+                            world");</p>
+
+                        <p style="margin-top: 14px;">function( exports , require , module , __filename, __dirname'){
+                            <br> console.log('hello world'); <br>}<span class="badge badge-success"></span></p>
+                        <h4>This wrapping gives various features to node js </h4>
+                        <b>exports</b><span> : A reference to module.exports that can be used to make it accessible to
+                            others.</span><br>
+                        <b>require</b><span> : A reference import Node js Modules.</span><br>
+                        <b>module</b><span> : A reference to current module.</span><br>
+                        <b>__dirname</b><span> : Directory name of the current file.</span><br>
+                        <b>__filename</b><span> : File name of the current file.</span><br>
+                        <hr>
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body alert-success">
+                        <br>
+                        <h3 style="color: blue;"># Path Module</h3>
+                        <p>To include it use: <b>const path = require('path')</b></p>
+                        <b>It has some built in functions like :</b>
+                        <br>
+                        <ul>
+                            <li><b>basename</b><br>var basenameeg=path.basename('filepath','js'); or
+                                path.basename('filepath');
+                            </li>
+                            <li><b>dirname</b><br>var dirnameeg=path.dirname('filepath');
+                            </li>
+                            <li><b>extname</b><br> var extnameeg= path.extname("filepath")</li>
+
+                            <li><b>join</b><br> var joineg= path.join("filepath"+"path2 or string ")</li>
+
+                            <li><b>normalize</b><br> var normalizeeg= path.normalize("filepath in incorrect way")</li>
+                            <li><b>parse</b><br> var parseeg= path.parse("filepath")</li>
+                            <li><b>isAbsolute</b><br> var isAbsoluteeg= path.isAbsolute("filepath")</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <br>
+
+        <div class="card">
+            <div class="card-body alert-primary">
+
+                <div class="row">
+                    <div class="col-sm">
+                        <br>
+                        <h3 style="color: green;"># FileSystem Module</h3>
+                        <p style="margin-top: 14px;">File System enables interacting with the files and filesystem based
+                            on POSIX function</p>
+                        <b style="margin-top: 14px;">Promise Based API , Sync API , Callback Api</b>
+
+                        <p style="margin-top: 14px;"><b>const fs = require('fs') or require('fs/promises')</b><span
+                                class="badge badge-success"></span></p>
+                        <h4>Various Functions are </h4>
+                        <b>access(path)</b><span> : check if dir or file exists or not .</span><br>
+                        <b>mkdir(path)</b><span> : creating directory</span><br>
+                        <b>readdir()</b><span> : Read content of direcoty.</span><br>
+                        <b>remdir()</b><span> : Remove directory.</span><br>
+                        <b>writeFile()</b><span> : Writes file async if present then replaces it .</span><br>
+                        <b>appendFile()</b><span> : Appends file async if not present then creates it .</span><br>
+                        <b>copyFile()</b><span> : Copy File src to dest .</span><br>
+                        <b>stat()</b><span> : give stats of the file .</span><br>
+
+                        <hr>
+                        <br>
+                    </div>
+                
+                    <div class="col-sm" style="background-color: white;">
+                        <br>
+                        <h5>Code Example Directory Create Promise Based Api</h5>
+                        <span>
+                            const fs = require('fs/promises');<br>
+                            async function createDirectory(){<br>
+                            const directoryPath = path.join(__dirname, 'demo');<br>
+                            try {<br>
+                            &nbsp;&nbsp;// Check if the directory already exists<br>
+                            &nbsp;&nbsp;await fs.access(directoryPath);<br>
+                            &nbsp;&nbsp;console.log('Directory already exists');<br>
+                            } catch (error) {<br>
+                            &nbsp;&nbsp;if (error.code === 'ENOENT') {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; // Directory doesn't exist, create it<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; try {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; await fs.mkdir(directoryPath);<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; console.log('Directory created');<br>
+                            &nbsp;&nbsp; &nbsp;&nbsp; } catch (createError) {<br>
+                            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; console.error('Error creating directory:',
+                            createError);<br>
+                            &nbsp;&nbsp; &nbsp;&nbsp; }<br>
+                            &nbsp;&nbsp;} else {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp; console.error('Error accessing directory:', error);<br>
+                            &nbsp;&nbsp;}<br>
+                            }<br>
+
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body alert-primary">
+                        <br>
+                        <h3 style="color: green;"># OS Module</h3>
+                        <p style="margin-top: 14px;">It provides operating system-related utility and properties</p>
+                        <p style="margin-top: 14px;"><b>const os = require('os'); </b></p>
+
+                        <p style="margin-top: 14px;"><b>Functions</b><span class="badge badge-success"></span></p>
+                        <b>platform()</b><span> : returns the string indentifying the operating system.</span><br>
+                        <b>arch()</b><span> : returns the architecture for which linux was configured.</span><br>
+                        <b>cpus()</b><span> : returns an array of objects containing information.</span><br>
+                        <b>hostname()</b><span> : returns the host name of the operating system.</span><br>
+                        <b>freemem()</b><span> : returns the amount of free memory in bytes as an integer.</span><br>
+                        
+                        <b>totalmem()</b><span> : returns the amount of total memory in bytes as an integer.</span><br>
+                        <hr>
+                        <br>
+
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body alert-primary">
+                        <h5 style="color: green;"># USING Templates</h5>
+                        <p style="margin-top: 10px;"><b>const fs = require('fs'); </b></p>
+                        <p style="margin-top: 0px;">
+                            fs.readFile('./public/home.html',(error,data)=>{ <br>&nbsp;&nbsp;res.end(data);<br> })
+                        </p>
+                        <p>Put this inside create server in http</p>
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-sm">
+                <div class="card">
+                    <div class="card-body alert-success">
+                        <br>
+                        <br>    
+                        <h3 style="color: blue;"># HTTP Module</h3>
+                        <p>Http module provides various features that are difficult to use for now  </p>
+                        <p>To include it use: <b>const http= require('http');</b></p>
+                        <p>To create a server use:<br> <b>const server=http.createServer((req,res)=>{ <br>&nbsp;&nbsp;// enter the code related to request and response and querying <br> })</b></p>
+                        
+                        <p>Along with configuring port :<br> <b>server.listen(PORT,HOST,()=>{<br>
+                          &nbsp;&nbsp;  console.log("Server started at Port "+ PORT)<br>
+                        })</b></p>
+                        <br>
+                        <b>Res Properities ( response )</b>
+                        <ul>
+                            <li> res.setHeader('Content-Type','text/plain')</li>
+                            <li>res.write('Some content for web');"</li>
+                            <li>
+                                res.end('Some ending content for web');
+                            </li>
+                        </ul>
+                            <b>Req  Properities ( request )</b>
+                        <ul>
+                            <li>req.url</li>
+                            <li>req.method</li>
+                         
+                        </ul>
+                        <br>
+                    </div>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="card">
+            <div class="card-body alert-primary">
+
+                <div class="row">
+                    <div class="col-sm">
+                        <br>
+                        <h3 style="color: green;"># EVENT Module</h3>
+                        <p style="margin-top: 14px;">It provides utilities for URL resolution and parsing</p>
+
+                        <p style="margin-top: 14px;"><b>const events= require('events');</b><br><span
+                                class="">var eventEmitter= new events();</span></p>
+                        <h6>Event emitter is registered using on() & once() method  </h6>
+                        <hr>
+                        <h6>  <u>on() method </u></h6>
+                        
+                        <span> 
+                            eventEmitter.on('myevent',function(){<br>
+                                &nbsp;&nbsp;  console.log("An event just occurred");<br>
+                            });<br>
+                            eventEmitter.emit('myevent');<br>
+                            eventEmitter.emit('myevent');<br>
+                            <b>This event will be triggered every time.</b>
+                        </span><br>
+                        <hr>
+                        <h6><u>once() method</u>  </h6>
+                        
+                        <span> 
+                            eventEmitter.once('myevent',function(){<br>
+                                &nbsp;&nbsp;  console.log("An event just occurred");<br>
+                            });<br>
+                            eventEmitter.emit('myevent');<br>
+                            eventEmitter.emit('myevent');<br>
+                            <b>This event will be triggered one time.</b>
+                        </span><br>
+                        
+                        <hr>
+                        <br>
+                    </div>
+                
+                    <div class="col-sm" style="background-color: white;">
+                        <br>
+                        <h3> # Form Requests</h3>
+                        <p>form can be get or post requests</p>
+                        <p>Access the url using : <b>const url = require('url');</b></p>
+                        <b>Logic code inside :  http.createServer</b>
+                        <p>const parsedUrl = url.parse(req.url, true);</p>
+                        <p>const path = parsedUrl.pathname;</p>
+                        <p>const query = parsedUrl.query;</p>
+                        <p>if (path=='form_action_url'){</p>
+                        <p>&nbsp;&nbsp;if (req.method=='GET'){</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp; //display form</p>
+                        <p>&nbsp;&nbsp;}</p>
+                        <p>&nbsp;&nbsp;if (req.method=='POST'){</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp; //form submit data with post request</p>
+                        <p>&nbsp;&nbsp;&nbsp;&nbsp; //eg. query.id or query.name</p>
+                        
+                        <p>&nbsp;&nbsp;}</p>
+                        <p>}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div style="height: 200px;"></div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
